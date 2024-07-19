@@ -1,0 +1,350 @@
+{
+  "users": [
+    {
+      "email": "sop1@email.com",
+      "password": "password",
+      "username": "sop1",
+      "id": 1,
+      "permissions": ["R", "W"]
+    },
+    {
+      "email": "sop2@email.com",
+      "password": "password",
+      "username": "sop2",
+      "id": 2,
+      "permissions": ["R", "W", "D"]
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "designation": "Software Engineer",
+      "department": "Engineering",
+      "hireDate": "2022-01-15",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Main St, Anytown, USA"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "designation": "Product Manager",
+      "department": "Product",
+      "hireDate": "2021-09-01",
+      "phone": "+1 (555) 234-5678",
+      "address": "456 Oak Ave, Somewhere, USA"
+    },
+    {
+      "id": 3,
+      "firstName": "Michael",
+      "lastName": "Johnson",
+      "email": "michael.johnson@example.com",
+      "designation": "UX Designer",
+      "department": "Design",
+      "hireDate": "2022-03-10",
+      "phone": "+1 (555) 345-6789",
+      "address": "789 Pine Rd, Elsewhere, USA"
+    },
+    {
+      "id": 4,
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "email": "emily.brown@example.com",
+      "designation": "Data Analyst",
+      "department": "Analytics",
+      "hireDate": "2022-06-22",
+      "phone": "+1 (555) 456-7890",
+      "address": "101 Elm St, Nowhere, USA"
+    },
+    {
+      "id": 5,
+      "firstName": "David",
+      "lastName": "Wilson",
+      "email": "david.wilson@example.com",
+      "designation": "Marketing Specialist",
+      "department": "Marketing",
+      "hireDate": "2021-11-05",
+      "phone": "+1 (555) 567-8901",
+      "address": "202 Maple Dr, Anyplace, USA"
+    },
+    {
+      "id": 6,
+      "firstName": "Sarah",
+      "lastName": "Taylor",
+      "email": "sarah.taylor@example.com",
+      "designation": "HR Manager",
+      "department": "Human Resources",
+      "hireDate": "2022-08-15",
+      "phone": "+1 (555) 678-9012",
+      "address": "303 Cedar Ln, Somewhere Else, USA"
+    },
+    {
+      "id": 7,
+      "firstName": "Robert",
+      "lastName": "Anderson",
+      "email": "robert.anderson@example.com",
+      "designation": "Financial Analyst",
+      "department": "Finance",
+      "hireDate": "2022-04-03",
+      "phone": "+1 (555) 789-0123",
+      "address": "404 Birch Ave, Another Town, USA"
+    },
+    {
+      "id": 8,
+      "firstName": "Lisa",
+      "lastName": "Martinez",
+      "email": "lisa.martinez@example.com",
+      "designation": "Customer Support Specialist",
+      "department": "Customer Service",
+      "hireDate": "2022-09-20",
+      "phone": "+1 (555) 890-1234",
+      "address": "505 Walnut St, New City, USA"
+    },
+    {
+      "id": 9,
+      "firstName": "Thomas",
+      "lastName": "Lee",
+      "email": "thomas.lee@example.com",
+      "designation": "Quality Assurance Engineer",
+      "department": "Engineering",
+      "hireDate": "2022-07-11",
+      "phone": "+1 (555) 901-2345",
+      "address": "606 Spruce Rd, Old Town, USA"
+    },
+    {
+      "id": 10,
+      "firstName": "Jennifer",
+      "lastName": "Garcia",
+      "email": "jennifer.garcia@example.com",
+      "designation": "Content Writer",
+      "department": "Marketing",
+      "hireDate": "2022-10-05",
+      "phone": "+1 (555) 012-3456",
+      "address": "707 Ash Dr, Small Village, USA"
+    },
+    {
+      "id": 11,
+      "firstName": "William",
+      "lastName": "Clark",
+      "email": "william.clark@example.com",
+      "designation": "Systems Administrator",
+      "department": "IT",
+      "hireDate": "2022-11-15",
+      "phone": "+1 (555) 123-4567",
+      "address": "808 Oak St, Tech City, USA"
+    },
+    {
+      "id": 12,
+      "firstName": "Olivia",
+      "lastName": "Rodriguez",
+      "email": "olivia.rodriguez@example.com",
+      "designation": "Graphic Designer",
+      "department": "Design",
+      "hireDate": "2023-01-10",
+      "phone": "+1 (555) 234-5678",
+      "address": "909 Pine Ave, Artville, USA"
+    },
+    {
+      "id": 13,
+      "firstName": "James",
+      "lastName": "Walker",
+      "email": "james.walker@example.com",
+      "designation": "Sales Representative",
+      "department": "Sales",
+      "hireDate": "2022-12-05",
+      "phone": "+1 (555) 345-6789",
+      "address": "1010 Elm Rd, Dealtown, USA"
+    },
+    {
+      "id": 14,
+      "firstName": "Sophia",
+      "lastName": "Hall",
+      "email": "sophia.hall@example.com",
+      "designation": "Business Analyst",
+      "department": "Analytics",
+      "hireDate": "2023-02-20",
+      "phone": "+1 (555) 456-7890",
+      "address": "1111 Maple Ln, Bizville, USA"
+    },
+    {
+      "id": 15,
+      "firstName": "Benjamin",
+      "lastName": "Young",
+      "email": "benjamin.young@example.com",
+      "designation": "Software Developer",
+      "department": "Engineering",
+      "hireDate": "2023-03-15",
+      "phone": "+1 (555) 567-8901",
+      "address": "1212 Cedar Ave, Codetown, USA"
+    },
+    {
+      "id": 16,
+      "firstName": "Emma",
+      "lastName": "Lopez",
+      "email": "emma.lopez@example.com",
+      "designation": "Project Coordinator",
+      "department": "Project Management",
+      "hireDate": "2023-04-01",
+      "phone": "+1 (555) 678-9012",
+      "address": "1313 Birch St, Projectville, USA"
+    },
+    {
+      "id": 17,
+      "firstName": "Daniel",
+      "lastName": "Hill",
+      "email": "daniel.hill@example.com",
+      "designation": "Network Engineer",
+      "department": "IT",
+      "hireDate": "2023-05-10",
+      "phone": "+1 (555) 789-0123",
+      "address": "1414 Walnut Dr, Nettown, USA"
+    },
+    {
+      "id": 18,
+      "firstName": "Ava",
+      "lastName": "Scott",
+      "email": "ava.scott@example.com",
+      "designation": "Social Media Manager",
+      "department": "Marketing",
+      "hireDate": "2023-06-15",
+      "phone": "+1 (555) 890-1234",
+      "address": "1515 Spruce Ave, Socialville, USA"
+    },
+    {
+      "id": 19,
+      "firstName": "Christopher",
+      "lastName": "Green",
+      "email": "christopher.green@example.com",
+      "designation": "Operations Manager",
+      "department": "Operations",
+      "hireDate": "2023-07-01",
+      "phone": "+1 (555) 901-2345",
+      "address": "1616 Ash St, Opstown, USA"
+    },
+    {
+      "id": 20,
+      "firstName": "Mia",
+      "lastName": "Adams",
+      "email": "mia.adams@example.com",
+      "designation": "Customer Success Manager",
+      "department": "Customer Service",
+      "hireDate": "2023-08-05",
+      "phone": "+1 (555) 012-3456",
+      "address": "1717 Oak Rd, Successville, USA"
+    },
+    {
+      "id": 21,
+      "firstName": "Ethan",
+      "lastName": "Baker",
+      "email": "ethan.baker@example.com",
+      "designation": "Data Scientist",
+      "department": "Analytics",
+      "hireDate": "2023-09-10",
+      "phone": "+1 (555) 123-4567",
+      "address": "1818 Pine St, Datatown, USA"
+    },
+    {
+      "id": 22,
+      "firstName": "Isabella",
+      "lastName": "Gonzalez",
+      "email": "isabella.gonzalez@example.com",
+      "designation": "Legal Counsel",
+      "department": "Legal",
+      "hireDate": "2023-10-15",
+      "phone": "+1 (555) 234-5678",
+      "address": "1919 Elm Ave, Lawville, USA"
+    },
+    {
+      "id": 23,
+      "firstName": "Alexander",
+      "lastName": "Nelson",
+      "email": "alexander.nelson@example.com",
+      "designation": "Product Designer",
+      "department": "Design",
+      "hireDate": "2023-11-01",
+      "phone": "+1 (555) 345-6789",
+      "address": "2020 Maple Blvd, Designtown, USA"
+    },
+    {
+      "id": 24,
+      "firstName": "Sofia",
+      "lastName": "Carter",
+      "email": "sofia.carter@example.com",
+      "designation": "Content Strategist",
+      "department": "Marketing",
+      "hireDate": "2023-12-05",
+      "phone": "+1 (555) 456-7890",
+      "address": "2121 Cedar Ln, Contentville, USA"
+    },
+    {
+      "id": 25,
+      "firstName": "Joseph",
+      "lastName": "Mitchell",
+      "email": "joseph.mitchell@example.com",
+      "designation": "DevOps Engineer",
+      "department": "Engineering",
+      "hireDate": "2024-01-10",
+      "phone": "+1 (555) 567-8901",
+      "address": "2222 Birch Rd, Devtown, USA"
+    },
+    {
+      "id": 26,
+      "firstName": "Charlotte",
+      "lastName": "Perez",
+      "email": "charlotte.perez@example.com",
+      "designation": "Account Manager",
+      "department": "Sales",
+      "hireDate": "2024-02-15",
+      "phone": "+1 (555) 678-9012",
+      "address": "2323 Walnut Ave, Accountville, USA"
+    },
+    {
+      "id": 27,
+      "firstName": "Ryan",
+      "lastName": "Roberts",
+      "email": "ryan.roberts@example.com",
+      "designation": "IT Support Specialist",
+      "department": "IT",
+      "hireDate": "2024-03-01",
+      "phone": "+1 (555) 789-0123",
+      "address": "2424 Spruce St, Techsupport, USA"
+    },
+    {
+      "id": 28,
+      "firstName": "Amelia",
+      "lastName": "Turner",
+      "email": "amelia.turner@example.com",
+      "designation": "Human Resources Coordinator",
+      "department": "Human Resources",
+      "hireDate": "2024-04-05",
+      "phone": "+1 (555) 890-1234",
+      "address": "2525 Ash Dr, HRville, USA"
+    },
+    {
+      "id": 29,
+      "firstName": "Samuel",
+      "lastName": "Phillips",
+      "email": "samuel.phillips@example.com",
+      "designation": "Marketing Analyst",
+      "department": "Marketing",
+      "hireDate": "2024-05-10",
+      "phone": "+1 (555) 901-2345",
+      "address": "2626 Oak Ln, Analyticstown, USA"
+    },
+    {
+      "id": 30,
+      "firstName": "Evelyn",
+      "lastName": "Campbell",
+      "email": "evelyn.campbell@example.com",
+      "designation": "UX Researcher",
+      "department": "Design",
+      "hireDate": "2024-06-15",
+      "phone": "+1 (555) 012-3456",
+      "address": "2727 Pine Ave, Researchville, USA"
+    }
+  ]
+}

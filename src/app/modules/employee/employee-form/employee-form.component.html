@@ -1,0 +1,29 @@
+<h4 class="m-4 text-secondary">Add Employee</h4>
+<form [formGroup]="employeeForm" class="m-4" novalidate>
+    <mat-form-field class="w-100 rounded-pill" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" class="rounded-pill" placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field class="w-100 rounded-pill" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email" class="rounded-pill" placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field class="w-100 rounded-pill" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" formControlName="address" class="rounded-pill" placeholder="Address">
+    </mat-form-field>
+
+    <mat-form-field class="w-100 rounded-pill" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput type="text" formControlName="phone" class="rounded-pill" placeholder="Phone">
+    </mat-form-field>
+
+    <div class="d-flex justify-content-end">
+        <button mat-stroked-button type="submit" class="mx-2"
+        (click)="cancel()">Cancel</button>
+        <button mat-flat-button type="submit" color="primary" class="text-white" [disabled]="!employeeForm.valid"
+        (click)="addEmployee()">Add</button>
+    </div>
+</form>

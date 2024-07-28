@@ -4,22 +4,28 @@
       "email": "sop1@email.com",
       "password": "password",
       "username": "sop1",
-      "id": 1,
-      "permissions": ["R", "W"]
+      "id": "1",
+      "permissions": [
+        "R",
+        "W"
+      ]
     },
     {
       "email": "sop2@email.com",
       "password": "password",
       "username": "sop2",
-      "id": 2,
-      "permissions": ["R", "W", "D"]
+      "id": "2",
+      "permissions": [
+        "R",
+        "W",
+        "D"
+      ]
     }
   ],
   "employees": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
+      "id": "1",
+      "name": "John Doe",
       "email": "john.doe@example.com",
       "designation": "Software Engineer",
       "department": "Engineering",
@@ -28,9 +34,8 @@
       "address": "123 Main St, Anytown, USA"
     },
     {
-      "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
+      "id": "2",
+      "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "designation": "Product Manager",
       "department": "Product",
@@ -39,9 +44,8 @@
       "address": "456 Oak Ave, Somewhere, USA"
     },
     {
-      "id": 3,
-      "firstName": "Michael",
-      "lastName": "Johnson",
+      "id": "3",
+      "name": "Michael Johnson",
       "email": "michael.johnson@example.com",
       "designation": "UX Designer",
       "department": "Design",
@@ -50,9 +54,8 @@
       "address": "789 Pine Rd, Elsewhere, USA"
     },
     {
-      "id": 4,
-      "firstName": "Emily",
-      "lastName": "Brown",
+      "id": "4",
+      "name": "Emily Brown",
       "email": "emily.brown@example.com",
       "designation": "Data Analyst",
       "department": "Analytics",
@@ -61,9 +64,8 @@
       "address": "101 Elm St, Nowhere, USA"
     },
     {
-      "id": 5,
-      "firstName": "David",
-      "lastName": "Wilson",
+      "id": "5",
+      "name": "David Wilson",
       "email": "david.wilson@example.com",
       "designation": "Marketing Specialist",
       "department": "Marketing",
@@ -72,9 +74,8 @@
       "address": "202 Maple Dr, Anyplace, USA"
     },
     {
-      "id": 6,
-      "firstName": "Sarah",
-      "lastName": "Taylor",
+      "id": "6",
+      "name": "Sarah Taylor",
       "email": "sarah.taylor@example.com",
       "designation": "HR Manager",
       "department": "Human Resources",
@@ -83,9 +84,8 @@
       "address": "303 Cedar Ln, Somewhere Else, USA"
     },
     {
-      "id": 7,
-      "firstName": "Robert",
-      "lastName": "Anderson",
+      "id": "7",
+      "name": "Robert Anderson",
       "email": "robert.anderson@example.com",
       "designation": "Financial Analyst",
       "department": "Finance",
@@ -94,9 +94,8 @@
       "address": "404 Birch Ave, Another Town, USA"
     },
     {
-      "id": 8,
-      "firstName": "Lisa",
-      "lastName": "Martinez",
+      "id": "8",
+      "name": "Lisa Martinez",
       "email": "lisa.martinez@example.com",
       "designation": "Customer Support Specialist",
       "department": "Customer Service",
@@ -105,9 +104,8 @@
       "address": "505 Walnut St, New City, USA"
     },
     {
-      "id": 9,
-      "firstName": "Thomas",
-      "lastName": "Lee",
+      "id": "9",
+      "name": "Thomas Lee",
       "email": "thomas.lee@example.com",
       "designation": "Quality Assurance Engineer",
       "department": "Engineering",
@@ -116,9 +114,8 @@
       "address": "606 Spruce Rd, Old Town, USA"
     },
     {
-      "id": 10,
-      "firstName": "Jennifer",
-      "lastName": "Garcia",
+      "id": "10",
+      "name": "Jennifer Garcia",
       "email": "jennifer.garcia@example.com",
       "designation": "Content Writer",
       "department": "Marketing",
@@ -127,9 +124,8 @@
       "address": "707 Ash Dr, Small Village, USA"
     },
     {
-      "id": 11,
-      "firstName": "William",
-      "lastName": "Clark",
+      "id": "11",
+      "name": "William Clark",
       "email": "william.clark@example.com",
       "designation": "Systems Administrator",
       "department": "IT",
@@ -138,9 +134,8 @@
       "address": "808 Oak St, Tech City, USA"
     },
     {
-      "id": 12,
-      "firstName": "Olivia",
-      "lastName": "Rodriguez",
+      "id": "12",
+      "name": "Olivia Rodriguez",
       "email": "olivia.rodriguez@example.com",
       "designation": "Graphic Designer",
       "department": "Design",
@@ -149,9 +144,8 @@
       "address": "909 Pine Ave, Artville, USA"
     },
     {
-      "id": 13,
-      "firstName": "James",
-      "lastName": "Walker",
+      "id": "13",
+      "name": "James Walker",
       "email": "james.walker@example.com",
       "designation": "Sales Representative",
       "department": "Sales",
@@ -160,9 +154,8 @@
       "address": "1010 Elm Rd, Dealtown, USA"
     },
     {
-      "id": 14,
-      "firstName": "Sophia",
-      "lastName": "Hall",
+      "id": "14",
+      "name": "Sophia Hall",
       "email": "sophia.hall@example.com",
       "designation": "Business Analyst",
       "department": "Analytics",
@@ -171,9 +164,8 @@
       "address": "1111 Maple Ln, Bizville, USA"
     },
     {
-      "id": 15,
-      "firstName": "Benjamin",
-      "lastName": "Young",
+      "id": "15",
+      "name": "Benjamin Young",
       "email": "benjamin.young@example.com",
       "designation": "Software Developer",
       "department": "Engineering",
@@ -182,9 +174,8 @@
       "address": "1212 Cedar Ave, Codetown, USA"
     },
     {
-      "id": 16,
-      "firstName": "Emma",
-      "lastName": "Lopez",
+      "id": "16",
+      "name": "Emma Lopez",
       "email": "emma.lopez@example.com",
       "designation": "Project Coordinator",
       "department": "Project Management",
@@ -193,9 +184,8 @@
       "address": "1313 Birch St, Projectville, USA"
     },
     {
-      "id": 17,
-      "firstName": "Daniel",
-      "lastName": "Hill",
+      "id": "17",
+      "name": "Daniel Hill",
       "email": "daniel.hill@example.com",
       "designation": "Network Engineer",
       "department": "IT",
@@ -204,9 +194,8 @@
       "address": "1414 Walnut Dr, Nettown, USA"
     },
     {
-      "id": 18,
-      "firstName": "Ava",
-      "lastName": "Scott",
+      "id": "18",
+      "name": "Ava Scott",
       "email": "ava.scott@example.com",
       "designation": "Social Media Manager",
       "department": "Marketing",
@@ -215,9 +204,8 @@
       "address": "1515 Spruce Ave, Socialville, USA"
     },
     {
-      "id": 19,
-      "firstName": "Christopher",
-      "lastName": "Green",
+      "id": "19",
+      "name": "Christopher Green",
       "email": "christopher.green@example.com",
       "designation": "Operations Manager",
       "department": "Operations",
@@ -226,9 +214,8 @@
       "address": "1616 Ash St, Opstown, USA"
     },
     {
-      "id": 20,
-      "firstName": "Mia",
-      "lastName": "Adams",
+      "id": "20",
+      "name": "Mia Adams",
       "email": "mia.adams@example.com",
       "designation": "Customer Success Manager",
       "department": "Customer Service",
@@ -237,9 +224,8 @@
       "address": "1717 Oak Rd, Successville, USA"
     },
     {
-      "id": 21,
-      "firstName": "Ethan",
-      "lastName": "Baker",
+      "id": "21",
+      "name": "Ethan Baker",
       "email": "ethan.baker@example.com",
       "designation": "Data Scientist",
       "department": "Analytics",
@@ -248,9 +234,8 @@
       "address": "1818 Pine St, Datatown, USA"
     },
     {
-      "id": 22,
-      "firstName": "Isabella",
-      "lastName": "Gonzalez",
+      "id": "22",
+      "name": "Isabella Gonzalez",
       "email": "isabella.gonzalez@example.com",
       "designation": "Legal Counsel",
       "department": "Legal",
@@ -259,9 +244,8 @@
       "address": "1919 Elm Ave, Lawville, USA"
     },
     {
-      "id": 23,
-      "firstName": "Alexander",
-      "lastName": "Nelson",
+      "id": "23",
+      "name": "Alexander Nelson",
       "email": "alexander.nelson@example.com",
       "designation": "Product Designer",
       "department": "Design",
@@ -270,9 +254,8 @@
       "address": "2020 Maple Blvd, Designtown, USA"
     },
     {
-      "id": 24,
-      "firstName": "Sofia",
-      "lastName": "Carter",
+      "id": "24",
+      "name": "Sofia Carter",
       "email": "sofia.carter@example.com",
       "designation": "Content Strategist",
       "department": "Marketing",
@@ -281,9 +264,8 @@
       "address": "2121 Cedar Ln, Contentville, USA"
     },
     {
-      "id": 25,
-      "firstName": "Joseph",
-      "lastName": "Mitchell",
+      "id": "25",
+      "name": "Joseph Mitchell",
       "email": "joseph.mitchell@example.com",
       "designation": "DevOps Engineer",
       "department": "Engineering",
@@ -292,9 +274,8 @@
       "address": "2222 Birch Rd, Devtown, USA"
     },
     {
-      "id": 26,
-      "firstName": "Charlotte",
-      "lastName": "Perez",
+      "id": "26",
+      "name": "Charlotte Perez",
       "email": "charlotte.perez@example.com",
       "designation": "Account Manager",
       "department": "Sales",
@@ -303,9 +284,8 @@
       "address": "2323 Walnut Ave, Accountville, USA"
     },
     {
-      "id": 27,
-      "firstName": "Ryan",
-      "lastName": "Roberts",
+      "id": "27",
+      "name": "Ryan Roberts",
       "email": "ryan.roberts@example.com",
       "designation": "IT Support Specialist",
       "department": "IT",
@@ -314,9 +294,8 @@
       "address": "2424 Spruce St, Techsupport, USA"
     },
     {
-      "id": 28,
-      "firstName": "Amelia",
-      "lastName": "Turner",
+      "id": "28",
+      "name": "Amelia Turner",
       "email": "amelia.turner@example.com",
       "designation": "Human Resources Coordinator",
       "department": "Human Resources",
@@ -325,9 +304,8 @@
       "address": "2525 Ash Dr, HRville, USA"
     },
     {
-      "id": 29,
-      "firstName": "Samuel",
-      "lastName": "Phillips",
+      "id": "29",
+      "name": "Samuel Phillips",
       "email": "samuel.phillips@example.com",
       "designation": "Marketing Analyst",
       "department": "Marketing",
@@ -336,9 +314,8 @@
       "address": "2626 Oak Ln, Analyticstown, USA"
     },
     {
-      "id": 30,
-      "firstName": "Evelyn",
-      "lastName": "Campbell",
+      "id": "30",
+      "name": "Evelyn Campbell",
       "email": "evelyn.campbell@example.com",
       "designation": "UX Researcher",
       "department": "Design",

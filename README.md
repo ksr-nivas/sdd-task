@@ -9,3 +9,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Run json-server under the project folder path
 
 sudo json-server --watch src/resources/db.json
+
+
+## Login using 
+username --> sop1/sop2
+password --> some random text (not checking for the password at the moment)

@@ -1,1 +1,193 @@
-<p>details works!</p>
+<div class="employee-details container-fluid">
+    <ul class="nav nav-pills my-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#pills-dashboard"
+                type="button" role="tab" aria-controls="pills-dashboard" aria-selected="false">Dashboard</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-leave-tab" data-bs-toggle="pill" data-bs-target="#pills-leave"
+                type="button" role="tab" aria-controls="pills-leave" aria-selected="false">Leave</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-attendance-tab" data-bs-toggle="pill" data-bs-target="#pills-attendance"
+                type="button" role="tab" aria-controls="pills-attendance" aria-selected="false">Attendance</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-performance-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-performance" type="button" role="tab" aria-controls="pills-performace"
+                aria-selected="true">Performace</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade" id="pills-dashboard" role="tabpanel" aria-labelledby="pills-dashboard-tab"
+            tabindex="0">
+            Dasshoard</div>
+        <div class="tab-pane fade" id="pills-leave" role="tabpanel" aria-labelledby="pills-leave-tab" tabindex="1">Leave
+        </div>
+        <div class="tab-pane fade" id="pills-attendance" role="tabpanel" aria-labelledby="pills-attendance-tab"
+            tabindex="2">Attendance
+        </div>
+        <div class="tab-pane fade show active" id="pills-performance" role="tabpanel"
+            aria-labelledby="pills-performance-tab" tabindex="3" *ngIf="employee; else loading">
+            <div class="header d-flex justify-content-between align-items-center my-4">
+                <header>
+                    <h5 class="text-secondary my-0">Good afternoon, {{ employee.name }}!</h5>
+                    <div class="text-secondary sub-title mt-2">Your performance is looking good!</div>
+                </header>
+                <mat-card class="d-flex flex-row align-items-center p-3">
+                    <div class="d-flex flex-column">
+                        <span class="text-secondary">Current Time</span>
+                        <span class="sub-title">{{currentTime | date: 'd MMM y, h:mm:ss a'}}</span>
+                    </div>
+                    <div class="icon ms-3">
+                        <mat-icon>history</mat-icon>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="row my-2">
+                <div class="col-sm-12 col-md-4">
+                    <mat-card class="d-flex flex-row align-items-center justify-content-between p-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-secondary fs-6 fw-bold">My Performace</span>
+                            <div class="d-flex flex-column mt-2">
+                                <span class="fs-4 fw-bold">202<span class="fs-6 fw-normal text-secondary"> /240</span></span>
+                                <div class="color-good ps-1 mt-2 text-secondary">Good Score</div>
+                            </div>
+                        </div>
+                        <div class="icon ms-3">
+                            <span class="position-absolute guage-value">84.34</span>
+                            <mat-progress-spinner name="guage" class="example-margin" [color]="'blue'" [mode]="'determinate'" [value]="'84.34'">
+                            </mat-progress-spinner>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <mat-card class="d-flex flex-row align-items-center justify-content-between p-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-secondary fs-6 fw-bold">Task Assigned</span>
+                            <div class="d-flex flex-column mt-2">
+                                <span class="fs-4 fw-bold">189</span>
+                                <div class="color-good ps-1 mt-2 text-secondary">223 Average tasks per user</div>
+                            </div>
+                        </div>
+                        <div class="icon ms-3">
+                            <mat-icon class="fs-4 text-info-emphasis">list_alt</mat-icon>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <mat-card class="d-flex flex-row align-items-center justify-content-between p-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-secondary fs-6 fw-bold">Task Completed</span>
+                            <div class="d-flex flex-column mt-2">
+                                <span class="fs-4 fw-bold">98.56</span>
+                                <div class="color-good ps-1 mt-2 text-secondary">Good score</div>
+                            </div>
+                        </div>
+                        <div class="icon ms-3">
+                            <mat-icon class="fs-4 text-info-emphasis">playlist_add_check</mat-icon>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <mat-card class="d-flex flex-row align-items-center justify-content-between p-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-secondary fs-6 fw-bold">Attendance %</span>
+                            <div class="d-flex flex-column mt-2">
+                                <span class="fs-4 fw-bold">89.87 %</span>
+                                <div class="color-good ps-1 mt-2 text-secondary">Average score</div>
+                            </div>
+                        </div>
+                        <div class="icon ms-3">
+                            <mat-icon class="fs-4 text-info-emphasis">list_alt</mat-icon>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <mat-card class="d-flex flex-row align-items-center justify-content-between p-3">
+                        <div class="d-flex flex-column">
+                            <span class="text-secondary fs-6 fw-bold">Leave %</span>
+                            <div class="d-flex flex-column mt-2">
+                                <span class="fs-4 fw-bold">100 %</span>
+                                <div class="color-good ps-1 mt-2 text-secondary">Perfect score</div>
+                            </div>
+                        </div>
+                        <div class="icon ms-3">
+                            <mat-icon class="fs-4 text-info-emphasis">list_alt</mat-icon>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        <ng-template #loading>
+            <p>Loading employee details...</p>
+        </ng-template>
+    </div>
+
+    <!-- can be moved a different component -->
+     <div class="row">
+        <div class="col-6">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+        </div>
+        <div class="col-6 gy-1">
+            <div class="row h-50 mb-2">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Performace comparison</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div style="display: block; width: 400px">
+                            <canvas
+                                baseChart
+                                [data]="barChartData"
+                                [options]="barChartOptions"
+                                [type]="barChartType">
+                            </canvas>
+                          </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="row h-50 mt-2">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Expenses</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        Expenses
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+     </div>
+</div>

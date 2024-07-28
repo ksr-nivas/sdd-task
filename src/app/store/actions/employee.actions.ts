@@ -13,6 +13,21 @@ export const loadEmployeesFailure = createAction(
   props<{ error: any }>()
 )
 
+export const getEmployee = createAction(
+  '[Employee] Get Employee',
+  props<{ id: number }>()
+)
+
+export const getEmployeeSuccess = createAction(
+  '[Employee] Get Employee Success',
+  props<{ employee: Employee }>()
+)
+
+export const getEmployeeFailure = createAction(
+  '[Employee] Get Employee Failure',
+  props<{ error: any }>()
+)
+
 export const addEmployee = createAction(
   '[Employee] Add Employee',
   props<{ employee: Employee }>()

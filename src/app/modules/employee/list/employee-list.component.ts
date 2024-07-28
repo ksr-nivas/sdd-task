@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { EmployeeService } from '../../../shared/services/employee.service';
+import { EmployeeService } from '../services/employee.service';
 import { Employee } from '../models/employee.model';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -15,11 +15,13 @@ import * as EmployeeActions from '../../../store/actions/employee.actions';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteConfirmationComponent } from '../../../shared/components/delete-confirmation/delete-confirmation.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { EmployeeFormComponent } from '../employee-form/employee-form.component';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-employee-list',
+  selector: 'sdd-employee-list',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -28,6 +30,8 @@ import { EmployeeFormComponent } from '../employee-form/employee-form.component'
     MatCheckboxModule,
     MatPaginatorModule,
     MatSidenavModule,
+    NgIf,
+    RouterLink,
     DeleteConfirmationComponent,
     EmployeeFormComponent
   ],
@@ -43,8 +47,10 @@ export class EmployeeListComponent implements OnInit {
   displayedColumns: string[] = ['select', 'name', 'email', 'address', 'phone', 'actions'];
   dataSource = new MatTableDataSource<Employee>([]);
   selection = new SelectionModel<Employee>(true, []);
+  selectedEmployee: Employee | undefined = undefined;
+  showform: boolean = false;
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private empService: EmployeeService) {}
 
   ngOnInit(): void {
     this.store.dispatch(EmployeeActions.loadEmployees());
@@ -54,7 +60,7 @@ export class EmployeeListComponent implements OnInit {
         if(!employees || !employees.length) {
           return;
         }
-        this.employees = employees;
+        this.employees = [...employees]?.reverse();
         this.dataSource = new MatTableDataSource<Employee>(this.employees);
         this.dataSource.paginator = this.paginator;
       },
@@ -83,23 +89,35 @@ export class EmployeeListComponent implements OnInit {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row?.id ?? 0 + 1}`;
   }
 
-  addEmployee(formValue: any): void {
-    console.log(formValue);
-    // TODO
+  addEmployee(formValue: any, drawer: MatDrawer): void {
+    this.store.dispatch(EmployeeActions.addEmployee({employee: formValue}));
+    this.closeDrawer(drawer);
   }
 
-  deleteEmployee(row?: any): void {
+  updateEmployee(formValue: any, drawer: MatDrawer): void {
+    this.store.dispatch(EmployeeActions.updateEmployee({employee: formValue}));
+    this.closeDrawer(drawer);
+  }
+
+  editEmployee(row: Employee, drawer: MatDrawer): void {
+    this.openDrawer(drawer);
+    this.selectedEmployee = {...row};
+  }
+
+  deleteEmployee(row?: Employee): void {
     if(!row && this.selection?.selected?.length === 0) {
       return;
     }
-    if(row) {
-      this.employees = this.employees.filter(emp => emp.id !== row.id);
+    if(row?.id) {
+      // this.employees = this.employees.filter(emp => emp.id !== row.id);
+      this.store.dispatch(EmployeeActions.deleteEmployee({id: row.id}));
     } else if(this.selection?.selected?.length > 0) {
       this.selection.selected.forEach(emp => {
-        this.employees = this.employees.filter(employee => employee.id !== emp.id);
+        //this.employees = this.employees.filter(employee => employee.id !== emp.id);
+        emp?.id && this.store.dispatch(EmployeeActions.deleteEmployee({id: emp.id}));
       });
     }
     this.selection.clear();
@@ -107,14 +125,25 @@ export class EmployeeListComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  openDialog(row?: any) {
+  openDrawer(drawer: MatDrawer) {
+    drawer.open();
+    this.showform = true;
+  }
+
+  closeDrawer(drawer: MatDrawer) {
+    this.selectedEmployee = undefined;
+    this.showform = false;
+    drawer.close();
+  }
+
+  openDeleteConfirmationDialog(row?: any) {
     const deleteDialog = this.dialog.open(DeleteConfirmationComponent);
 
     deleteDialog.afterClosed().pipe(take(1)).subscribe(result => {
       if(result) {
         this.deleteEmployee(row);
       } else if(result === false) {
-        this._snackBar.open('Not authorized', 'Close', {
+        this._snackBar.open('Invalid selection/Not authorized', 'Close', {
           duration: 5000
         });
       }

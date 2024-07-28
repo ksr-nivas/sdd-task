@@ -8,7 +8,7 @@ import { take } from 'rxjs';
 import { User } from '../../../modules/login/models/user.model';
 
 @Component({
-  selector: 'app-delete-confirmation',
+  selector: 'sdd-delete-confirmation',
   standalone: true,
   imports: [MatDialogContent, MatDialogActions, MatButtonModule, MatDialogClose],
   templateUrl: './delete-confirmation.component.html',

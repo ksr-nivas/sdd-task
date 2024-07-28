@@ -1,29 +1,40 @@
-<h4 class="m-4 text-secondary">Add Employee</h4>
-<form [formGroup]="employeeForm" class="m-4" novalidate>
+<h4 class="m-4 text-secondary">{{buttonLabel}} Employee</h4>
+<form #form="ngForm" [formGroup]="employeeForm" class="m-4" novalidate>
     <mat-form-field class="w-100 rounded-pill" appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput type="text" formControlName="name" class="rounded-pill" placeholder="Name">
+        <input matInput type="text" formControlName="name" class="rounded-pill" placeholder="Name" [ngClass]="{ 'is-invalid': submitted && employeeForm.get('name')?.errors }">
+        @if(employeeForm.get('name')?.touched && employeeForm.get('name')?.hasError('required')) {
+            <mat-error>Name is <strong>required</strong></mat-error>
+        }
     </mat-form-field>
 
     <mat-form-field class="w-100 rounded-pill" appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput type="text" formControlName="email" class="rounded-pill" placeholder="Email">
+        <input matInput type="email" formControlName="email" class="rounded-pill" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && employeeForm.get('email')?.errors }">
+        @if (employeeForm.get('email')?.touched && employeeForm.get('email')?.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+        }
+        @if (employeeForm.get('email')?.touched && employeeForm.get('email')?.hasError('email') && employeeForm.get('email')?.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+        }
     </mat-form-field>
 
     <mat-form-field class="w-100 rounded-pill" appearance="outline">
         <mat-label>Address</mat-label>
-        <input matInput type="text" formControlName="address" class="rounded-pill" placeholder="Address">
+        <input matInput type="text" formControlName="address" class="rounded-pill" placeholder="Address" [ngClass]="{ 'is-invalid': submitted && employeeForm.get('address')?.errors }">
     </mat-form-field>
 
     <mat-form-field class="w-100 rounded-pill" appearance="outline">
         <mat-label>Phone</mat-label>
-        <input matInput type="text" formControlName="phone" class="rounded-pill" placeholder="Phone">
+        <input matInput type="tel" formControlName="phone" class="rounded-pill" placeholder="Phone" [ngClass]="{ 'is-invalid': submitted && employeeForm.get('phone')?.errors }">
+        @if(employeeForm.get('phone')?.touched &&employeeForm.get('phone')?.hasError('required')) {
+            <mat-error>Phone is <strong>required</strong></mat-error>
+        }
     </mat-form-field>
 
     <div class="d-flex justify-content-end">
-        <button mat-stroked-button type="submit" class="mx-2"
-        (click)="cancel()">Cancel</button>
-        <button mat-flat-button type="submit" color="primary" class="text-white" [disabled]="!employeeForm.valid"
-        (click)="addEmployee()">Add</button>
+        <button mat-stroked-button class="mx-2" (click)="cancel()">Cancel</button>
+        <button mat-flat-button color="primary" type="submit" class="text-white" (click)="addOrUpdateEmployee()"
+                [disabled]="!employeeForm.valid">{{buttonLabel}}</button>
     </div>
 </form>

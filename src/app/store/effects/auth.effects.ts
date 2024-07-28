@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects'
 import { of } from 'rxjs'
 import { catchError, map, mergeMap } from 'rxjs/operators'
 import * as AuthActions from '../actions/auth.actions'
-import { AuthService } from '../../shared/services/auth.service'
+import { AuthService } from '../../modules/login/services/auth.service'
 import { User } from '../../modules/login/models/user.model'
 
 @Injectable()
@@ -14,7 +14,10 @@ export class AuthEffects {
       mergeMap((action: {username: string, password: string}) =>
         this.authService.login().pipe(
           map((users: User[]) => {
-            const loggedInUser = users.find( (user) => user.username === action.username )
+            const loggedInUser = users.find( (user) => user.username === action.username );
+            if(loggedInUser) {
+              this.authService.setuser(loggedInUser);
+            }
             return AuthActions.loginSuccess( { users, loggedInUser })}),
           catchError((error) => of(AuthActions.loginFailure({ error })))
         )

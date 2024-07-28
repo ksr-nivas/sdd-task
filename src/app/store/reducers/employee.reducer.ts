@@ -33,10 +33,21 @@ export const employeeReducer = createReducer(
     loading: false,
     error
   })),
-//   on(EmployeeActions.selectEmployee, (state, { employee }) => ({
-//     ...state,
-//     selectedEmployee: employee
-//   })),
+  on(EmployeeActions.getEmployee, (state, { id }) => ({
+    ...state,
+    loading: true
+  })),
+  on(EmployeeActions.getEmployeeSuccess, (state, { employee }) => ({
+    ...state,
+    selectedEmployee: employee,
+    loading: false,
+    error: null
+  })),
+  on(EmployeeActions.getEmployeeFailure, (state, { error }) => ({
+    ...state,
+    loading: false,
+    error
+  })),
   on(EmployeeActions.addEmployee, state => ({
     ...state,
     loading: true
@@ -59,7 +70,6 @@ export const employeeReducer = createReducer(
   on(EmployeeActions.updateEmployeeSuccess, (state, { employee }) => ({
     ...state,
     employees: state.employees.map(emp => emp.id === employee.id ? employee : emp),
-    selectedEmployee: employee,
     loading: false,
     error: null
   })),

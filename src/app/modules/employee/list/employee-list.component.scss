@@ -7,6 +7,10 @@
     background-color: #ececec;
 }
 
+.drawer-container {
+    height: calc(100% - 65px);
+}
+
 mat-drawer {
-    width: 500px;
+    width: 350px;
 }

@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-root',
+  selector: 'sdd-root',
   standalone: true,
   imports: [
     RouterOutlet,
